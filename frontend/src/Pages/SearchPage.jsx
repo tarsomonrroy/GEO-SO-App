@@ -4,6 +4,8 @@ import AltoContraste from '../Components/Acessibility/AltoContraste/AltoContrast
 import React, { useCallback, useState } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
+const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+
 const containerStyle = {
   width: "100%",
   height: "600px", // Ajuste conforme necessário
@@ -17,7 +19,7 @@ const initialCoordinates = {
 function SearchPage() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyBnQ_NYOQ3-6vsr-P_w7ipBkGfNTJ_cuUY", // Substitua pela sua chave válida
+    googleMapsApiKey,
   });
 
   const [map, setMap] = useState(null);
@@ -29,13 +31,18 @@ function SearchPage() {
   }, []);
 
   const handleSearch = async () => {
+    if (!googleMapsApiKey) {
+      alert("Configure a variável VITE_GOOGLE_MAPS_API_KEY para ativar a busca por endereço.");
+      return;
+    }
+
     if (!address.trim()) return;
 
     try {
       const response = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
           address
-        )}&key=AIzaSyBnQ_NYOQ3-6vsr-P_w7ipBkGfNTJ_cuUY`
+        )}&key=${googleMapsApiKey}`
       );
       const data = await response.json();
 
@@ -45,7 +52,7 @@ function SearchPage() {
           lat: location.lat,
           lng: location.lng,
         });
-        map.panTo(location);
+        map?.panTo(location);
       } else {
         alert("Endereço não encontrado!");
       }
