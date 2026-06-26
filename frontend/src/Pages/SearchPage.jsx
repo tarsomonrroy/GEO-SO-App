@@ -68,32 +68,33 @@ function SearchPage() {
         <AltoContraste />
         {/* <DarkMode /> */}
       </main>
-    <div>
-      <h1>Localização</h1>
-      <div style={{ marginBottom: "10px" }}>
-        <input
-          type="text"
-          placeholder="Digite um endereço"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          style={{ width: "70%", padding: "8px", marginRight: "10px" }}
-        />
-        <button onClick={handleSearch} style={{ padding: "8px 16px" }}>
-          Pesquisar
-        </button>
+      <div>
+        <h1>Localização</h1>
+        <div style={{ marginBottom: "10px" }}>
+          <input
+            type="text"
+            placeholder="Digite um endereço"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            style={{ width: "70%", padding: "8px", marginRight: "10px" }}
+          />
+          <button onClick={handleSearch} style={{ padding: "8px 16px" }}>
+            Pesquisar
+          </button>
+        </div>
+        {isLoaded ? (
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={coordinates}
+            zoom={16} // Zoom ajustado para uma visão mais ampla
+            onLoad={onLoad}
+          >
+            <Marker position={coordinates} />
+          </GoogleMap>
+        ) : (
+          <div>Carregando mapa...</div>
+        )}
       </div>
-      {isLoaded ? (
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={coordinates}
-          zoom={16} // Zoom ajustado para uma visão mais ampla
-          onLoad={onLoad}
-        >
-          <Marker position={coordinates} />
-        </GoogleMap>
-      ) : (
-        <div>Carregando mapa...</div>
-      )}
     </div>
   );
 }
