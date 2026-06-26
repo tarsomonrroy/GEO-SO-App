@@ -1,0 +1,101 @@
+.container {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  /* flex-direction: column; causa de conteudo quebrado */
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.22px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 960px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 40px; /* Reduzido o padding para telas maiores */
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    padding: 80px 20px; /* Reduz ainda mais para telas menores */
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.searchBox {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  max-width: 100%; /* Garante que ocupe 100% em telas pequenas */
+  flex-direction: column;
+  padding: 50px 20px; /* Ajuste do padding para ser responsivo */
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .searchBox {
+    padding: 20px; /* Padding reduzido para telas menores */
+  }
+}
+
+.title {
+  /* color: #000; */
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  align-self: start;
+}
+
+.inputField {
+  background-color: #fff;
+  margin-top: 20px; /* Ajuste para evitar grandes margens em telas menores */
+  line-height: 1.6;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%; /* Responsivo para preencher toda a largura */
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .inputField {
+    margin-top: 15px; /* Margem menor para telas menores */
+  }
+}
+
+.searchButton {
+  border-radius: 6px;
+  background-color: #00d084;
+  align-self: center; /* Centraliza em telas menores */
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 20px;
+  width: fit-content;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

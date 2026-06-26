@@ -1,0 +1,95 @@
+.loginSection {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 191px 80px;
+}
+
+.loginForm {
+    background-color: #fff;
+    width: 622px;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 47px 47px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.formTitle {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    margin-bottom: 43px;
+    text-align: center;
+}
+
+.formGroup {
+    margin-bottom: 24px;
+    margin-left: -24px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 8px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font: 400 15px Montserrat, sans-serif;
+}
+
+.submitBtn {
+    align-self: center;
+    width: 130px;
+    padding: 11px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #00d084;
+    color: #fff;
+    font: 500 15px Montserrat, sans-serif;
+    cursor: pointer;
+}
+
+.recoverLink {
+    text-align: center;
+    margin: 24px 0;
+    text-decoration: none;
+}
+
+.signupPrompt {
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    font: 400 15px Montserrat, sans-serif;
+}
+
+.signupPromptEx {
+    display: none;
+    gap: 7px;
+    justify-content: center;
+    font: 400 15px Montserrat, sans-serif;
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .loginSection {
+        padding: 100px 20px;
+    }
+    .loginForm {
+        max-width: 70%;
+        padding: 20px -10px;
+    }
+    .signupPrompt a {
+        display: none;
+    }
+    .signupPromptEx {
+        display: flex;
+    }
+}

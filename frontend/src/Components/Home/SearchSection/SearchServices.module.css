@@ -1,0 +1,135 @@
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 81px 80px;
+}
+
+.content {
+  gap: 20px;
+  display: flex;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  font-family: Montserrat, sans-serif;
+  margin: auto 0;
+}
+
+.title {
+  /* color: #000; */
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.72px;
+  align-self: start;
+}
+
+.description {
+  /* color: rgba(0, 0, 0, 0.8); */
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: -0.54px;
+  margin-top: 11px;
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  /* margin-left: 20px; */
+}
+
+.image {
+  aspect-ratio: 1.66;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.searchButton {
+  border-radius: 6px;
+  background-color: #00d084;
+  align-self: center;
+  margin-top: 91px;
+  width: 362px;
+  max-width: 100%;
+  color: #f5f5f5;
+  text-align: center;
+  letter-spacing: -0.26px;
+  padding: 16px 35px;
+  font: 500 17px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 610px) {
+  .container {
+    max-width: 100%;
+    margin-right: 4px;
+    padding: 0 20px;
+  }
+  .searchButton {
+    margin: 40px;
+    /* padding: 0 20px; */
+  }
+  .image {
+    max-width: 100%;
+    margin-top: 40px;
+  
+  .title {
+    /* color: #000; */
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.72px;
+    align-self: start;
+  }
+  .imageColumn {
+    width: 100%;
+  }
+  .description {
+    max-width: 100%;
+    /* color: rgba(0, 0, 0, 0.8); */
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: -0.54px;
+    margin-top: 11px;
+  }
+  
+  @media (max-width: 991px) {
+    .description {
+      max-width: 100%;
+    }
+  }
+  .title {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 33px;
+  }
+  .textContent {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  .textColumn {
+    width: 100%;
+  }
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}

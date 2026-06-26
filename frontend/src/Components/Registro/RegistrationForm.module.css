@@ -1,0 +1,63 @@
+.registrationContainer {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: -0.22px;
+    font: 400 15px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    padding: 150px 30px;
+}
+
+.registrationForm {
+    background-color: #fff;
+    width: 622px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 47px 47px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.formTitle {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    margin: 0;
+    text-align: center;
+}
+
+.nameFields {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.registerButton {
+    border-radius: 6px;
+    background-color: rgb(0, 208, 132);
+    align-self: center;
+    margin-top: 24px;
+    width: 130px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding: 11px 31px;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 610px) {
+    .registrationForm {
+        padding: 20px;
+    }
+
+    .nameFields {
+        margin-top: 40px;
+    }
+
+    .registerButton {
+        padding: 11px 20px;
+    }
+}

@@ -1,0 +1,31 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font: 400 15px Montserrat, sans-serif;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media screen and (max-width: 610px) {
+    .inputField {
+        padding-right: 0px;
+    }
+}

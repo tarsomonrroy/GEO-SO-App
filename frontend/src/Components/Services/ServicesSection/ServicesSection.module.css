@@ -1,0 +1,75 @@
+.section {
+  background-color: #fff;
+  display: flex;
+  /* width: 100%; Isso limitava de forma estranha a section de serviços */
+  flex-direction: column;
+  overflow: hidden;
+  align-items: start;
+  padding: 87px 80px;
+}
+
+.title {
+  color: #00d084;
+  letter-spacing: -0.36px;
+  font: 700 24px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.container {
+  margin-top: 48px;
+  width: 100%;
+  max-width: 1308px;
+}
+
+.columnWrapper {
+  gap: 20px;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0;
+}
+
+.serviceList {
+  /* color: #232323; */
+  align-self: stretch;
+  margin: auto 0;
+  font: 500 16px/33px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 780px) {
+
+  .title {
+    margin-top: -80px;
+  }
+  .serviceList {
+    max-width: 100%;
+    margin-top: -40px;
+  }
+  .column {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .columnWrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .section {
+    max-width: 100%;
+    padding: 100px 20px 0;
+  }
+  .container {
+    max-width: 100%;
+    margin-top: 40px;
+  
+  .serviceList {
+    /* color: #232323; */
+    align-self: stretch;
+    margin: auto 0;
+    font: 500 16px/33px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+}

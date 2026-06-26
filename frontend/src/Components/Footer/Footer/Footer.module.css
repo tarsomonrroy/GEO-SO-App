@@ -1,0 +1,72 @@
+.footer {
+  background-color: rgba(0, 208, 132, 1);
+  display: flex;
+  /* max-width: 1680px; essa linha limitava o tamanho do footer, n sei pq tava aqui*/
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 38px;
+}
+
+.copyright {
+  color: rgba(0, 0, 0, 1);
+  font: 500 11px/24px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.contactWrapper {
+  align-self: start;
+  display: flex;
+  gap: 40px 100px;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  align-self: start;
+  display: flex;
+  gap: 15px;
+  color: rgba(0, 0, 0, 1);
+  font: 500 11px/24px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 34px;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: start;
+  gap: 40px 44px;
+}
+
+.socialIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 35px;
+}
+
+@media screen and (max-width: 1312px) {
+  .copyright {
+    text-align: center;
+  }
+
+  .contactWrapper {
+    max-width: 100%;
+    display: contents;
+  }
+
+  .socialIcons {
+    padding-bottom: 20px;
+  }
+
+  .footer {
+    margin-right: 4px;
+    padding: 0 20px;
+    padding-top: 10px;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center;    /* Alinha verticalmente */
+  }
+}

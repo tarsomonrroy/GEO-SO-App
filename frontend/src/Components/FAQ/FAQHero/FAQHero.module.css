@@ -1,0 +1,49 @@
+.hero {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  color: #000;
+  letter-spacing: -0.72px;
+  font: 400 18px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100px;
+  /* width: 100%; */
+  /* padding: 279px 70px 213px; */
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroTitle {
+  position: relative;
+  margin-left: 100px;
+  margin-top: 200px;
+}
+
+@media screen and (max-width: 610px) {
+  .heroContent {
+    max-width: 100%;
+    font-size: 40px;
+    /* padding: 100px 20px 110px; */
+  }
+  .heroTitle {
+    font-size: 28px;
+    line-height: 42px;
+    width: 60%;
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+}
